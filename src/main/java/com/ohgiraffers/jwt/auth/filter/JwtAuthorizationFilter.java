@@ -76,7 +76,7 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
         * - w+ 하나 이상의 알파벳 문자, 숫자, 언더바 로 이루어진 문자열과 일치하는 패턴
         * - 예시 : /test/\\w+
         * - "/test/user123"
-        * 
+        *
         * */
 
         if(roleLeessList.stream().anyMatch(uri -> roleLeessList.stream().anyMatch(pattern -> Pattern.matches(pattern, request.getRequestURI())))){
